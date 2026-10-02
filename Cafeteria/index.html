@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Café Luna</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+    <!-- ENCABEZADO -->
+
+    <header id="inicio">
+
+        <img
+            src="imagenes/logo.png"
+            alt="Logo de Café Luna"
+            class="logo"
+        >
+
+        <h1>Café Luna</h1>
+
+        <p>Un momento para disfrutar</p>
+
+    </header>
+
+
+    <!-- NAVEGACIÓN -->
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#menu">Menú</a>
+
+        <a href="#nosotros">Nosotros</a>
+
+        <a href="#contacto">Contacto</a>
+
+        <a href="#carrito" class="carrito-link">
+            🛒 Carrito
+            <span id="cantidad-carrito">0</span>
+        </a>
+
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+
+        <!-- SECCIÓN 1 - PRESENTACIÓN -->
+
+        <section class="presentacion" id="nosotros">
+
+            <h2>Bienvenidos a Café Luna</h2>
+
+            <p>
+                Somos una cafetería dedicada a ofrecer café y
+                productos artesanales en un ambiente cálido
+                y agradable.
+            </p>
+
+            <a href="#menu" class="boton">
+                Ver menú
+            </a>
+
+        </section>
+
+
+        <!-- SECCIÓN 2 - MENÚ DESTACADO -->
+
+        <section class="menu" id="menu">
+
+            <h2>Menú destacado</h2>
+
+            <p class="descripcion-menu">
+                Elegí tus favoritos de Café Luna
+            </p>
+
+
+            <!-- CAFÉ -->
+
+            <article class="producto">
+
+                <div class="producto-imagen cafe-imagen">
+                    ☕
+                </div>
+
+                <div class="producto-info">
+
+                    <h3>Café</h3>
+
+                    <p>
+                        Café recién preparado, con un aroma
+                        intenso y un sabor delicioso.
+                    </p>
+
+                    <div class="producto-abajo">
+
+                        <p class="precio">
+                            $2000
+                        </p>
+
+                        <button
+                            class="boton-producto"
+                            onclick="agregarProducto('Café', 2000)">
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAPUCCINO -->
+
+            <article class="producto">
+
+                <div class="producto-imagen capuccino-imagen">
+                    ☕
+                </div>
+
+                <div class="producto-info">
+
+                    <h3>Capuccino</h3>
+
+                    <p>
+                        Café con leche espumada y un toque
+                        de cacao.
+                    </p>
+
+                    <div class="producto-abajo">
+
+                        <p class="precio">
+                            $2500
+                        </p>
+
+                        <button
+                            class="boton-producto"
+                            onclick="agregarProducto('Capuccino', 2500)">
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- MEDIALUNAS -->
+
+            <article class="producto">
+
+                <div class="producto-imagen medialuna-imagen">
+                    🥐
+                </div>
+
+                <div class="producto-info">
+
+                    <h3>Medialunas</h3>
+
+                    <p>
+                        Medialunas artesanales, dulces y
+                        recién horneadas.
+                    </p>
+
+                    <div class="producto-abajo">
+
+                        <p class="precio">
+                            $1200
+                        </p>
+
+                        <button
+                            class="boton-producto"
+                            onclick="agregarProducto('Medialunas', 1200)">
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- CARRITO -->
+
+        <section class="carrito" id="carrito">
+
+            <h2>🛒 Tu carrito</h2>
+
+            <div class="carrito-contenido">
+
+                <div id="productos-carrito">
+
+                    <p class="carrito-vacio">
+                        Tu carrito está vacío.
+                    </p>
+
+                </div>
+
+
+                <div class="total">
+
+                    <p>Total</p>
+
+                    <strong id="total-carrito">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="boton-finalizar"
+                    onclick="finalizarPedido()">
+                    Finalizar pedido
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MENSAJE DE PEDIDO -->
+
+    <div
+        class="mensaje-pedido"
+        id="mensaje-pedido">
+
+        <div class="mensaje-contenido">
+
+            <div class="icono-mensaje">
+                ☕
+            </div>
+
+            <h2>
+                ¡Gracias por tu pedido!
+            </h2>
+
+            <p>
+                Tu pedido fue recibido correctamente.
+            </p>
+
+            <p>
+                Esperamos que disfrutes tu momento
+                en Café Luna.
+            </p>
+
+            <button onclick="cerrarMensaje()">
+                Cerrar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer id="contacto">
+
+
+        <div>
+
+            <h3>Café Luna</h3>
+
+            <p>
+                Un momento para disfrutar.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contacto</h3>
+
+            <p>
+                Dirección: Calle Principal 123
+            </p>
+
+            <p>
+                Instagram: @cafeluna
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>Horarios</h3>
+
+            <p>
+                Lunes a viernes: 08:00 - 20:00
+            </p>
+
+            <p>
+                Sábados y domingos: 09:00 - 21:00
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

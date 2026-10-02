@@ -1,0 +1,354 @@
+/* ------------------------------
+   ESTILOS GENERALES
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f8fa;
+    color: #263238;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+header {
+    background-color: #ffffff;
+}
+
+
+/* Imagen principal del header */
+
+.imagen-header {
+    min-height: 430px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 70, 100, 0.35),
+            rgba(0, 40, 70, 0.55)
+        ),
+        url("../imagenes/viaje.png");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+/* Logo */
+
+.imagen-header img {
+    width: 260px;
+    max-width: 80%;
+    height: auto;
+
+    margin-bottom: 20px;
+}
+
+
+/* Texto del header */
+
+.texto-header {
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.texto-header h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.texto-header p {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* ------------------------------
+   NAVEGACIÓN
+------------------------------ */
+
+nav {
+    background-color: #007c91;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 17px 25px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #f4a340;
+    color: #ffffff;
+}
+
+
+/* ------------------------------
+   SECCIONES GENERALES
+------------------------------ */
+
+section {
+    padding: 75px 8%;
+}
+
+h2 {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    color: #006477;
+
+    margin-bottom: 15px;
+}
+
+
+/* ------------------------------
+   DESTINOS
+------------------------------ */
+
+.destinos {
+    background-color: #f4f8fa;
+}
+
+.introduccion {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    color: #607d86;
+
+    font-size: 18px;
+}
+
+
+/* Contenedor de tarjetas */
+
+.contenedor-tarjetas {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Tarjetas */
+
+.tarjeta {
+    background-color: #ffffff;
+
+    width: 320px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Imágenes de las tarjetas */
+
+.tarjeta img {
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Contenido */
+
+.contenido-tarjeta {
+    padding: 25px;
+}
+
+.contenido-tarjeta h3 {
+    color: #007c91;
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    margin-bottom: 12px;
+}
+
+.contenido-tarjeta p {
+    color: #546e75;
+
+    font-size: 15px;
+}
+
+
+/* ------------------------------
+   PROMOCIÓN
+------------------------------ */
+
+.promocion {
+    background-color: #e7f5f7;
+
+    text-align: center;
+}
+
+.caja-promocion {
+    max-width: 800px;
+
+    margin: 35px auto 0;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 40px;
+
+    border: 2px solid #f4a340;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.caja-promocion h3 {
+    color: #007c91;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.caja-promocion p {
+    color: #546e75;
+
+    font-size: 18px;
+}
+
+.caja-promocion strong {
+    color: #e88920;
+
+    font-size: 21px;
+}
+
+.destacado {
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #007c91 !important;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    background-color: #004b5c;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 45px 20px 25px;
+}
+
+footer h2 {
+    color: #ffffff;
+
+    margin-bottom: 25px;
+}
+
+footer p {
+    margin: 10px 0;
+
+    color: #dceff2;
+}
+
+footer a {
+    color: #f4c06a;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 30px !important;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 13px;
+
+    color: #a9c8cd !important;
+}
